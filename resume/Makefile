@@ -1,4 +1,4 @@
-TEXROOTS=austenbarker-cv.tex
+TEXROOTS=austenbarker-resume.tex
 
 OUTPUTS=$(TEXROOTS:.tex=.pdf)
 DEPS=$(TEXROOTS:.tex=.d)
