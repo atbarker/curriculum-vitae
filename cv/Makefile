@@ -1,4 +1,4 @@
-TEXROOTS=main.tex
+TEXROOTS=austenbarker-cv.tex
 
 OUTPUTS=$(TEXROOTS:.tex=.pdf)
 DEPS=$(TEXROOTS:.tex=.d)
