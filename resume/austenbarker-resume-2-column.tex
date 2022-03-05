@@ -1,0 +1,245 @@
+%Resume.tex
+%disable chktex warnings
+% chktex-file 1
+%-------------------------
+% Resume in Latex
+% Original Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt,oneside]{memoir}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\setlrmarginsandblock{0.5in}{3in}{*}
+\setulmarginsandblock{0.5in}{0.7in}{*}
+\setlength{\sidebarhsep}{0.5in}
+\setlength{\sidebarwidth}{2in}
+\setsidebarheight{\textheight}
+\checkandfixthelayout
+\setcounter{secnumdepth}{0}
+\nonzeroparskip
+\setlength{\parindent}{0pt}
+
+%\urlstyle{same}
+%\raggedbottom{}
+%\raggedright{}
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-15pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule{} \vspace{-8pt}]
+
+%-------------------------
+% Custom commands
+
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+\newcommand{\position}[2]{\emph{#1}\hfill\small{\mdseries{#2}}}
+
+\newcommand{\employer}[2]{\subsubsection{#1\hfill\mdseries{#2}}}
+
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}%\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}
+    %\subsubsection{#1\hfill\mdseries{#2}}
+    %\emph{#3}\hfill\mdseries{#4}
+}
+\newcommand{\resumeSubheadingContinue}[2]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}
+}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
+%\newcommand{\resumeSubItem}[2]{{#1}{#2}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\vspace{1pt}\begin{itemize}[noitemsep,nolistsep,leftmargin=*,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[noitemsep,nolistsep]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+%\nonzeroparskip
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%  %\textbf{\href{http://pcwilcox.com/}{\Large Pete Wilcox}} & Email :
+%    \textbf{{\Large Austen Barker}} & +1 (650) 575\textendash{}7253  \\
+%	\href{mailto:austenbarker@yahoo.com}{austenbarker@yahoo.com},\href{mailto:atbarker@ucsc.edu}{atbarker@ucsc.edu}
+  %\href{http://pcwilcox.com/}{http://www.pcwilcox.com} & Mobile : +1-510-393-4074 \\
+%    & github/LinkedIn: atbarker
+%\end{tabular*}
+
+\begin{minipage}[t][0.6in][b]{4in}
+    {\fontsize{30pt}{34pt}\selectfont
+        \rmfamily\textbf{Austen Barker}}
+    \vfill
+    \textsf{Some statement here}
+\end{minipage}
+
+\sidebar{\begin{minipage}[t][0.6in][b]{1in}
+    users.soe.ucsc.edu/atbarker/ 
+    \vfill
+    austenbarker@yahoo.com
+    \vfill
+    www.github.com/atbarker
+\end{minipage}}
+
+\vskip6pt
+
+\sidebar{
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}
+      {C, C++, Python, Go, Java, Lisp/Scheme}
+   \resumeSubItem{Technologies}
+      {FreeBSD, Linux, Windows, Git, Docker}
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+  \resumeSubHeadingListStart
+  \resumeSubItem{Eagle Scout}
+     {Troop 30, Los Altos, CA, 2012}
+  \resumeSubHeadingListEnd
+
+}
+
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  %\resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Santa Cruz}{Santa Cruz, CA}
+     {Doctor of Philosophy, Computer Science}{Sep. 2018 \textemdash{} Present}\\
+    \resumeSubheadingContinue
+      {Master of Science, Computer Science}{Sep. 2017 \textemdash{} Jun. 2018}\\
+    \resumeSubheadingContinue
+      {Bachelor of Science, Computer Science; GPA:\@ 3.60}{Sep. 2013 \textemdash{} Jun. 2017}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  %\resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Santa Cruz}{Santa Cruz, CA}
+      {Graduate Student Researcher}{Apr. 2018 \textemdash{} Present}
+      \resumeItemListStart
+        \resumeItem{\href{https://www.ssrc.ucsc.edu/proj/Artifice.html}{Artifice}}
+    	  {Ongoing research into deniable storage systems.} 
+    	\resumeItem{\href{https://www.ssrc.ucsc.edu/proj/securefs.html}{Lethe}}
+    	  {Efficient secure deletion system for use with file systems or key value stores.}
+      \resumeItemListEnd
+
+    \resumeSubheadingContinue
+      {Teaching Assistant}{Sep. 2019 \textemdash{} Dec. 2019, Jan. 2018 \textemdash{} Mar. 2018}
+      \resumeItemListStart
+        \resumeItem{CSE-13S}
+          {Computer Systems and C Programming, Fall quarter 2019}
+        \resumeItem{CMPS-111}
+          {Introduction to Operating Systems, Spring quarter 2018}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {DataStax}{Santa Clara, CA}
+      {Information Security Intern }{ Jul. 2017 \textemdash{} Dec. 2017, Jun. 2018 \textemdash{} Sep. 2018}
+      \resumeItemListStart
+        \resumeItem{Single Sign-on API}
+	  {Designed and implemented a prototype single sign-on authentication API, user database, and password handling utilities in Go for a SAAS database platform.}
+        \resumeItem{Deployment Setup and Hardening Automation}
+          {Wrote setup and server hardening automation scripts for a distributed database system using Chef, Vagrant, and Docker.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {TidalScale}{Los Gatos, CA}
+      {Software Engineer Intern}{Jun. 2016 \textemdash{} Sep. 2016}
+      \resumeItemListStart
+        \resumeItem{TS-stats}
+          {Python administration and monitoring utility for a distributed hypervisor.}
+        \resumeItem{Ubuntu Server Certification}
+	  {Performed testing on a distributed hypervisor platform for the Ubuntu Server Certification process.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Immediate Insight}{Los Altos, CA}
+      {Intern}{June 2014 \textemdash{} Sep. 2014, Jun. 2015 \textemdash{} Sep. 2015}
+      \resumeItemListStart
+        \resumeItem{Kaiser Permanente Deployment}
+	  {Supported the deployment of a IT data analytics tool within the Kaiser Permanente IT infrastructure.}
+        \resumeItem{Product Testing}
+          {Installation, capacity, reliability, and operational testing of an IT data analytics platform.}
+      \resumeItemListEnd
+
+  %\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Research and Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://www.ssrc.ucsc.edu/proj/Artifice.html}{Artifice}}
+      {Deniable steganographic storage system written as a devicemapper virtual block device kernel module. Further work done on red team testing and forensic analysis of the system to verify the security of Artifice's design and implementation.}
+    \resumeSubItem{\href{https://www.ssrc.ucsc.edu/proj/securefs.html}{Lethe}}
+      {Key derivation and encryption system that enables secure deletion of encrypted data by efficiently revoking a key through the use of keyed hash trees. Current implementation written in C/C++.}
+    \resumeSubItem{Vinz Clortho}
+      {Covert timing channel implemented as a netfilter Linux kernel module for the secure exfiltration of encryption keys from a distributed system relying on a gossip protocol.}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Technical Skills}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{Languages}
+%      {C, C++, Python, Go, Java, Lisp/Scheme}
+%   \resumeSubItem{Technologies}
+%      {FreeBSD, Linux, Windows, Git, Docker}
+%  \resumeSubHeadingListEnd
+
+%\section{Achievements}
+%  \resumeSubHeadingListStart
+%  \resumeSubItem{Eagle Scout}
+%     {Troop 30, Los Altos, CA, 2012}
+%  \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
+
