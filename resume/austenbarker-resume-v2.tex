@@ -1,9 +1,8 @@
 %Resume.tex
-%disable chktex warnings
-% chktex-file 1
 %-------------------------
 % Resume in Latex
 % Original Author : Sourabh Bajaj
+% Heavily modified by Austen Barker and Pete Wilcox
 % License : MIT
 %------------------------
 
@@ -16,7 +15,6 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-%\usepackage[hidelinks]{hyperref}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
@@ -26,13 +24,6 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-%\addtolength{\oddsidemargin}{-0.5in}
-%\addtolength{\evensidemargin}{-0.5in}
-%\addtolength{\textwidth}{1in}
-%\addtolength{\topmargin}{-.5in}
-%\addtolength{\textheight}{1.0in}
 
 \setlrmarginsandblock{0.5in}{0.5in}{*}
 \setulmarginsandblock{0.5in}{0.7in}{*}
@@ -45,8 +36,6 @@
 \setlength{\parindent}{0pt}
 
 %\urlstyle{same}
-%\raggedbottom{}
-%\raggedright{}
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
@@ -76,8 +65,6 @@
       \textbf{#1} & #2 \\
       \textit{\small #3} & \textit{\small #4} \\
     \end{tabular*}
-    %\subsubsection{#1\hfill\mdseries{#2}}
-    %\emph{#3}\hfill\mdseries{#4}
 }
 \newcommand{\resumeSubheadingContinue}[2]{
   \vspace{-1pt}
@@ -86,7 +73,6 @@
     \end{tabular*}
 }
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
-%\newcommand{\resumeSubItem}[2]{{#1}{#2}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -94,7 +80,6 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[noitemsep,nolistsep]}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
-%\nonzeroparskip
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -102,27 +87,19 @@
 \begin{document}
 
 %----------HEADING-----------------
-%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%  %\textbf{\href{http://pcwilcox.com/}{\Large Pete Wilcox}} & Email :
-%    \textbf{{\Large Austen Barker}} & +1 (650) 575\textendash{}7253  \\
-%	\href{mailto:austenbarker@yahoo.com}{austenbarker@yahoo.com},\href{mailto:atbarker@ucsc.edu}{atbarker@ucsc.edu}
-  %\href{http://pcwilcox.com/}{http://www.pcwilcox.com} & Mobile : +1-510-393-4074 \\
-%    & github/LinkedIn: atbarker
-%\end{tabular*}
-
 \begin{minipage}[t]{0.75\textwidth}
 \raggedright
     {\fontsize{30pt}{34pt}\selectfont
         \rmfamily\textbf{Austen Barker}}
     \vfill
-    Some sort of text here.
+    Computer science researcher and programmer specializing in security, operating systems, and storage who likes to break things and then figure out how to fix them.
     %\textsf{Some statement here}
 \end{minipage}
 %\vspace{-10pt}
 \begin{minipage}[t]{0.25\textwidth}
 \raggedleft
     \vspace{-20pt}
-    \href{https://atbarker.github.io}{atbarker.github.io}
+    \href{https://atbarker.com}{atbarker.com}
     \vfill
     \href{mailto:austenbarker@yahoo.com}{austenbarker@yahoo.com}
     \href{mailto:atbarker@ucsc.edu}{atbarker@ucsc.edu}
@@ -130,26 +107,10 @@
     \href{https://www.github.com/atbarker}{github.com/atbarker}
 \end{minipage}
 
-%\end{minipage}
-
-%\sidebar{\begin{minipage}[t][-0.8in][b]{1in}
-%    users.soe.ucsc.edu/atbarker/ 
-%    \vfill
-%    austenbarker@yahoo.com
-%    \vfill
-%    www.github.com/atbarker
-%\end{minipage}}
-
 \vskip6pt
-
-%\sidebar{
-%}
-
-
 
 %-----------EDUCATION-----------------
 \section{Education}
-  %\resumeSubHeadingListStart
     \resumeSubheading
      {University of California, Santa Cruz}{Santa Cruz, CA}
      {Doctor of Philosophy, Computer Science}{Sep. 2018 \textemdash{} Present}
@@ -166,7 +127,6 @@
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
-  %\resumeSubHeadingListStart
     \resumeSubheading
       {University of California, Santa Cruz}{Santa Cruz, CA}
       {Graduate Student Researcher, Storage Systems Research Center}{Apr. 2018 \textemdash{} Present}
@@ -216,8 +176,6 @@
           {Installation, capacity, reliability, and operational testing of an IT data analytics platform.}
       \resumeItemListEnd
 
-  %\resumeSubHeadingListEnd
-
 %-----------PROJECTS-----------------
 \section{Research and Projects}
   \resumeSubHeadingListStart
@@ -230,7 +188,6 @@
       {Covert timing channel implemented as a netfilter Linux kernel module for the secure exfiltration of encryption keys from a distributed system relying on a gossip protocol.}
   \resumeSubHeadingListEnd
 
-%
 %--------PROGRAMMING SKILLS------------
 \section{Technical Skills}
   \resumeSubHeadingListStart
@@ -240,13 +197,12 @@
       {FreeBSD, Linux, Windows, Git, Docker}
   \resumeSubHeadingListEnd
 
+%--------AWARDS/ACHIEVEMENTS-------
 \section{Achievements}
   \resumeSubHeadingListStart
   \resumeSubItem{Eagle Scout}
      {Troop 30, Los Altos, CA, 2012}
   \resumeSubHeadingListEnd
-
-
 
 %-------------------------------------------
 \end{document}
