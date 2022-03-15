@@ -2,6 +2,7 @@ TEXROOTS=austenbarker-resume-v2.tex
 
 OUTPUTS=$(TEXROOTS:.tex=.pdf)
 DEPS=$(TEXROOTS:.tex=.d)
+DATE=$(shell date '+%m-%d-%Y')
 
 #ifeq ("$(wildcard bib/csrg.bib)","")
 #$(error "Please update the bib submodule: git submodule update --init --recursive")
@@ -13,6 +14,8 @@ all: $(OUTPUTS)
 
 %.pdf: %.tex
 	latexmk -pdf -M -MF $(DEPS) $<
+	mv $(OUTPUTS) austenbarker-resume-$(DATE).pdf
+
 
 clean:
 	$(RM) *.dvi *.bbl *.blg *.aux *.fls *.log *.fdb_latexmk $(DEPS) *.out *.def *.ques
